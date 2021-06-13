@@ -12,10 +12,12 @@ The passwords are generated using the Python [string](https://docs.python.org/3/
 
 The result is some truly cyrptic passwords that, if using sufficient length (generally 15 characters or more), will be strong enough for most applications.
 
-Currently only the command line option exists to launch the application and that for only Linux at the moment.  To use the application simply download the binary and from the location where it is saved launch a terminal session and run the command `./pypassword`.
+Currently only the command line option exists to launch the application and that for only Linux at the moment.  To use the application simply download the binary and from the location where it is saved launch a terminal session and run the command `./pypassword`.  This will launch the GUI frontend.
 
 # Screenshots
 
-![](images/pypassword-01.png)
+![](images/pypassword-03.png)
 
-![](images/pypassword-02.png)
+![](images/pypassword-04.png)
+
+![](images/pypassword-05.png)

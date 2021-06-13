@@ -39,16 +39,18 @@ sg.theme("DarkGrey9")
 
 pass_length = [
     [
-        sg.Text(
-            "Enter Password Length:", size=(25, 0), font=("Courier New", 10, "bold")
-        ),
-        sg.InputText(
-            "",
-            size=(10, 0),
-            font=("Courier New", 10, "bold"),
-            key="password_length",
-            enable_events=True,
-        ),
+        [sg.Text("Password Length", size=(17, 1), font=("Courier New", 11, "bold"))],
+        [
+            sg.Slider(
+                range=(8, 50),
+                default_value=10,
+                size=(54, 10),
+                orientation="horizontal",
+                font=("Courier New", 10, "bold"),
+                key="password_length",
+                border_width=1,
+            )
+        ],
     ]
 ]
 
@@ -69,6 +71,7 @@ layout = [
     [pass_length],
     [sg.Text("")],
     [sg.Frame("Password", output)],
+    [sg.Text("")],
     [sg.Button("Generate", key="GENERATE"), sg.Text("", size=(40, 1)), sg.Exit()],
 ]
 
@@ -82,11 +85,11 @@ while True:
     if event == sg.WIN_CLOSED or event == "Exit":
         break
 
-    if event == "password_length" and values["password_length"]:
-        try:
-            number_test = int(values["password_length"])
-        except:
-            window["password_length"].update(values["password_length"][:-1])
+    # if event == "password_length" and values["password_length"]:
+    #     try:
+    #         number_test = int(values["password_length"])
+    #     except:
+    #         window["password_length"].update(values["password_length"][:-1])
 
     if event == "GENERATE":
         try:
